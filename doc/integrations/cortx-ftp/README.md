@@ -1,10 +1,10 @@
 # CORTX Integration with FTP
 
-What is FTP:
+What is FTP
 ----
 The File Transfer Protocol (FTP) is a standard communication protocol used for the transfer of computer files from a server to a client on a computer network. 
 
-Integrating CORTX with FTP:
+Integrating CORTX with FTP
 ----
 The integration architecture is shown below. In this integration, there is a FTP client, a FTP server, and a Cortx/S3 server. FTP client and FTP server connect through FTP protocol. FTP server uses s3fs mount as storage. s3fs sync with S3 server's S3 bucket.    
 
@@ -58,7 +58,7 @@ Create test file in Cortx S3 bucket.
     echo "test_ftp" > test_file
     aws --endpoint "https://192.168.1.111:443" --no-verify-ssl s3 cp ./test_file s3://testbucket/
 
-Step 2: Use ftp client on another machine (e.g Windows has default ftp client available) to connect to ftp server (use your own ftp server ip). Login with Name: ftp and Password is empty. List and get the test_file.
+Step 2: Use ftp client on another machine (e.g. Windows has default ftp client available) to connect to ftp server (use your own ftp server ip). Login with Name: ftp and Password is empty. List and get the test_file.
 
     c:\tmp>ftp 172.27.117.60
     Connected to 172.27.117.60.
